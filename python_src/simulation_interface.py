@@ -23,7 +23,9 @@ from python_src.ai_model import AIAdaptiveEngine, ThresholdAdaptiveEngine
 class SimulationInterface:
     """Manages execution of OFDM simulations across MATLAB and Python engines."""
 
-    def __init__(self, workspace_dir: str = "D:\\DC project"):
+    def __init__(self, workspace_dir: Optional[str] = None):
+        if workspace_dir is None or not os.path.isdir(workspace_dir):
+            workspace_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
         self.workspace_dir = workspace_dir
         self.matlab_dir = os.path.join(workspace_dir, "matlab")
         self.data_dir = os.path.join(workspace_dir, "data")
