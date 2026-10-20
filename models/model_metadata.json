@@ -1,0 +1,59 @@
+{
+  "model_type": "RandomForest",
+  "target_ber": 0.01,
+  "confidence_threshold": 0.55,
+  "max_pilot_error_threshold": 0.2,
+  "feature_names": [
+    "snr_db",
+    "h_mean",
+    "h_var",
+    "h_min",
+    "pilot_error_var",
+    "target_ber_log10"
+  ],
+  "training_metrics": {
+    "accuracy": 0.842,
+    "classification_report": {
+      "BPSK": {
+        "precision": 0.9280575539568345,
+        "recall": 0.9314079422382672,
+        "f1-score": 0.9297297297297298,
+        "support": 277.0
+      },
+      "QPSK": {
+        "precision": 0.7333333333333333,
+        "recall": 0.7415730337078652,
+        "f1-score": 0.7374301675977654,
+        "support": 89.0
+      },
+      "16-QAM": {
+        "precision": 0.7681159420289855,
+        "recall": 0.6883116883116883,
+        "f1-score": 0.726027397260274,
+        "support": 77.0
+      },
+      "64-QAM": {
+        "precision": 0.6984126984126984,
+        "recall": 0.7719298245614035,
+        "f1-score": 0.7333333333333333,
+        "support": 57.0
+      },
+      "accuracy": 0.842,
+      "macro avg": {
+        "precision": 0.7819798819329629,
+        "recall": 0.783305622204806,
+        "f1-score": 0.7816301569802757,
+        "support": 500.0
+      },
+      "weighted avg": {
+        "precision": 0.842586120916931,
+        "recall": 0.842,
+        "f1-score": 0.8417410592807547,
+        "support": 500.0
+      }
+    },
+    "num_samples": 2000,
+    "train_samples": 1500,
+    "test_samples": 500
+  }
+}

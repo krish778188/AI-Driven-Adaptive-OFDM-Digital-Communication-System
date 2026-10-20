@@ -1,0 +1,33 @@
+{
+  "system": {
+    "n_fft": 64,
+    "n_cp": 16,
+    "bandwidth_hz": 20000000,
+    "subcarrier_spacing_hz": 312500,
+    "data_subcarriers": 48,
+    "pilot_subcarriers": 4,
+    "equalizer": "MMSE"
+  },
+  "channel": {
+    "channel_type": "Rayleigh",
+    "num_taps": 4,
+    "decay_factor": 0.5,
+    "cfo_normalized": 0.0,
+    "timing_offset": 0
+  },
+  "simulation": {
+    "default_snr_db": 14.0,
+    "target_ber": 0.01,
+    "num_bits": 20000,
+    "snr_sweep_start": 0.0,
+    "snr_sweep_end": 24.0,
+    "snr_sweep_step": 2.0,
+    "random_state": 42
+  },
+  "ai_adaptation": {
+    "model_type": "RandomForest",
+    "confidence_threshold": 0.55,
+    "max_pilot_error_threshold": 0.20,
+    "target_ber_default": 0.01
+  }
+}
